@@ -1,4 +1,4 @@
-This is coreutils.info, produced by makeinfo version 4.13 from
+This is coreutils.info, produced by makeinfo version 4.8 from
 coreutils.texi.
 
 INFO-DIR-SECTION Basics
@@ -1094,11 +1094,11 @@ the `--preserve-option', is safer for most purposes.
 
    The commands `chgrp', `chmod' and `chown' can also operate
 destructively on entire hierarchies, so they too support these options.
-Although, unlike `rm', they don't actually unlink files, these commands
-are arguably more dangerous when operating recursively on `/', since
-they often work much more quickly, and hence damage more files before
-an alert user can interrupt them.  Tradition and POSIX require these
-commands to operate recursively on `/', so they default to
+Although, unlike `rm', they don't actually unlink files, these
+commands are arguably more dangerous when operating recursively on `/',
+since they often work much more quickly, and hence damage more files
+before an alert user can interrupt them.  Tradition and POSIX require
+these commands to operate recursively on `/', so they default to
 `--no-preserve-root', but using the `--preserve-root' option makes them
 safer for most purposes.  For convenience you can specify
 `--preserve-root' in an alias or in a shell function.
@@ -1193,7 +1193,7 @@ none are given, to standard output.  Synopsis:
 
      cat [OPTION] [FILE]...
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-A'
@@ -1271,7 +1271,7 @@ default) in each separately.  Synopsis:
 default).  By default, this separator string is attached to the end of
 the record that it follows in the file.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-b'
@@ -1336,7 +1336,7 @@ that comes before the first section delimiter string in the input file
 is considered to be part of a body section, so `nl' treats a file that
 contains no section delimiters as a single body section.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-b STYLE'
@@ -1453,7 +1453,7 @@ is assumed if the last operand begins with `+' or (if there are two
 operands) a digit.  For example, in `od foo 10' and `od +10' the `10'
 is an offset, whereas in `od 10' the `10' is a file name.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-A RADIX'
@@ -1660,7 +1660,7 @@ ASCII characters to represent binary data.  Synopses:
 The format conforms to RFC 4648
 (ftp://ftp.rfc-editor.org/in-notes/rfc4648.txt).
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-w COLS'
@@ -1729,7 +1729,7 @@ algorithm is a variant of that given by Donald E. Knuth and Michael F.
 Plass in "Breaking Paragraphs Into Lines", `Software--Practice &
 Experience' 11, 11 (November 1981), 1119-1184.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-c'
@@ -1828,7 +1828,7 @@ versions of `pr':  - Brian
      cannot be specified as separate arguments from the preceding
      option letter (already stated in the POSIX specification).
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `+FIRST_PAGE[:LAST_PAGE]'
@@ -2067,7 +2067,7 @@ is split into as many lines as necessary.
 than one column, backspace decreases the column count, and carriage
 return sets the column to zero.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-b'
@@ -2127,7 +2127,7 @@ consisting of:
 
 before the output for each FILE.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-c K'
@@ -2200,7 +2200,7 @@ that are at most as large as its buffer, which is typically 32 KiB.  A
 more reliable and versatile way to reverse files is the GNU `tac'
 command.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-c K'
@@ -2380,7 +2380,7 @@ produces the original input file.  If the output file names are
 exhausted, `split' reports an error without deleting the output files
 that it did create.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-l LINES'
@@ -2483,7 +2483,7 @@ original input file.
 interrupt, quit, or terminate signal, it removes any output files that
 it has created so far before it exits.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-f PREFIX'
@@ -2629,7 +2629,7 @@ maximum (not the sum) of those lengths.  The line lengths here are
 measured in screen columns, according to the current locale and
 assuming tab positions in every 8th column.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-c'
@@ -2695,7 +2695,7 @@ argument.)
 compatible with BSD `sum' and prints file sizes in units of 1024-byte
 blocks.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-r'
@@ -2763,7 +2763,7 @@ fingerprint, or modifying a file so as to retain its MD5 are considered
 infeasible at the moment, it is known how to produce different files
 with identical MD5 (a "collision"), something which can be a security
 issue in certain contexts.  For more secure hashes, consider using
-SHA-1 or SHA-2.  *Note sha1sum invocation::, and *note sha2 utilities::.
+SHA-1 or SHA-2.  *Note sha1sum invocation::, and *Note sha2 utilities::.
 
    If a FILE is specified as `-' or if no files are given `md5sum'
 computes the checksum for the standard input.  `md5sum' can also
@@ -2778,7 +2778,7 @@ problematic character in the file name is escaped with a backslash,
 making the output unambiguous even in the presence of arbitrary file
 names.  If FILE is omitted or specified as `-', standard input is read.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-b'
@@ -3032,7 +3032,7 @@ scripts should specify global options first.
 `--human-numeric-sort'
 `--sort=human-numeric'
      Sort numerically, as per the `--numeric-sort' option below, and in
-     addition handle IEC or SI suffixes like MiB, MB etc (*note Block
+     addition handle IEC or SI suffixes like MiB, MB etc (*Note Block
      size::).  Note a mixture of IEC and SI suffixes is not supported
      and will be flagged as an error.  Also the numbers must be
      abbreviated uniformly.  I.E. values with different precisions like
@@ -3542,7 +3542,7 @@ category.
 
    If no OUTPUT file is specified, `uniq' writes to standard output.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-f N'
@@ -3663,7 +3663,7 @@ FILE2, and column three contains lines common to both files.  Columns
 are separated by a single TAB character.
 
    The options `-1', `-2', and `-3' suppress printing of the
-corresponding columns (and separators).  Also see *note Common
+corresponding columns (and separators).  Also see *Note Common
 options::.
 
    Unlike some other comparison utilities, `comm' has an exit status
@@ -4126,7 +4126,7 @@ File: coreutils.info,  Node: tsort invocation,  Prev: ptx invocation,  Up: Opera
 
 `tsort' performs a topological sort on the given FILE, or standard
 input if no input file is given or for a FILE of `-'.  For more details
-and some history, see *note tsort background::.  Synopsis:
+and some history, see *Note tsort background::.  Synopsis:
 
      tsort [OPTION] [FILE]
 
@@ -4301,7 +4301,7 @@ elements can be repeated, can overlap, and can be specified in any
 order; but the selected input is written in the same order that it is
 read, and is written exactly once.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-b BYTE-LIST'
@@ -4391,7 +4391,7 @@ given.
 
      paste [OPTION]... [FILE]...
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-s'
@@ -4487,7 +4487,7 @@ with whatever you hoped it would be.
    * each output line consists of the join field, the remaining fields
      from FILE1, then the remaining fields from FILE2.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-a FILE-NUMBER'
@@ -4911,7 +4911,7 @@ backspace characters in the output; they decrement the column count for
 tab calculations.  The default action is equivalent to `-t 8' (set tabs
 every 8 columns).
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-t TAB1[,TAB2]...'
@@ -4954,7 +4954,7 @@ precede all non-blank characters) on each line.  It preserves backspace
 characters in the output; they decrement the column count for tab
 calculations.  By default, tabs are set at every 8th column.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-t TAB1[,TAB2]...'
@@ -5033,7 +5033,7 @@ options affect more than one aspect of `ls''s operation.
      2 serious trouble (e.g., memory exhausted, invalid option or failure
        to access file or directory specified as a command line argument)
 
-   Also see *note Common options::.
+   Also see *Note Common options::.
 
 * Menu:
 
@@ -5885,7 +5885,7 @@ variable.  You can specify the shell syntax to use on the command line,
 or `dircolors' will guess it from the value of the `SHELL' environment
 variable.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-b'
@@ -5988,7 +5988,7 @@ backup file, either regular or numbered, as specified in the usual ways
 (*note Backup options::).  This is useful when you simply want to make
 a backup of an existing file before changing it.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-a'
@@ -6600,7 +6600,7 @@ files onto themselves.
 
    `install' never preserves extended attributes (xattr).
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-b'
@@ -6755,7 +6755,7 @@ FreeBSD 6.1 and Solaris 10) it silently renames not the symlink but
 rather the directory referenced by the symlink.  *Note Trailing
 slashes::.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-b'
@@ -6848,7 +6848,7 @@ or `..' is rejected without any prompting.
 to recover the contents of that file.  If you want more assurance that
 the contents are truly unrecoverable, consider using `shred'.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-f'
@@ -7030,7 +7030,7 @@ sure that it is not backed up or mirrored.
 
      shred [OPTION]... FILE[...]
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-f'
@@ -7245,7 +7245,7 @@ location where the relative symlink will be created, so that
 tab-completion or other file resolution will find the same target as
 what will be placed in the symlink.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-b'
@@ -7355,7 +7355,7 @@ File: coreutils.info,  Node: mkdir invocation,  Next: mkfifo invocation,  Prev: 
 an error if NAME already exists, unless the `-p' option is given and
 NAME is a directory.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-m MODE'
@@ -7420,7 +7420,7 @@ to communicate.  One process opens the FIFO file for writing, and
 another for reading, after which data can flow as with the usual
 anonymous pipe in shells or elsewhere.
 
-   The program accepts the following option.  Also see *note Common
+   The program accepts the following option.  Also see *Note Common
 options::.
 
 `-m MODE'
@@ -7482,7 +7482,7 @@ device number begins with `0x' or `0X', it is interpreted as
 hexadecimal; otherwise, if it begins with `0', as octal; otherwise, as
 decimal.
 
-   The program accepts the following option.  Also see *note Common
+   The program accepts the following option.  Also see *Note Common
 options::.
 
 `-m MODE'
@@ -7524,7 +7524,7 @@ File: coreutils.info,  Node: readlink invocation,  Next: rmdir invocation,  Prev
 
    By default, `readlink' operates in readlink mode.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-f'
@@ -7580,7 +7580,7 @@ File: coreutils.info,  Node: rmdir invocation,  Next: unlink invocation,  Prev: 
    If any DIRECTORY argument does not refer to an existing empty
 directory, it is an error.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `--ignore-fail-on-non-empty'
@@ -7720,7 +7720,7 @@ invoked by a user with appropriate privileges, or when the bits signify
 some function other than executable permission (e.g., mandatory
 locking).  When in doubt, check the underlying system behavior.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-c'
@@ -7840,7 +7840,7 @@ existing reference file.  Synopsis:
    If GROUP is intended to represent a numeric group ID, then you may
 specify it with a leading `+'.  *Note Disambiguating names and IDs::.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-c'
@@ -7947,13 +7947,13 @@ This behavior depends on the policy and functionality of the underlying
 behavior.
 
    If used, MODE specifies the new file mode bits.  For details, see
-the section on *note File permissions::.  If you really want MODE to
+the section on *Note File permissions::.  If you really want MODE to
 have a leading `-', you should use `--' first, e.g., `chmod -- -w
 file'.  Typically, though, `chmod a-w file' is preferable, and `chmod -w
 file' (without the `--') complains if it behaves differently from what
 `chmod a-w file' would do.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-c'
@@ -8037,7 +8037,7 @@ set.  *Note Specifying the Time Zone with `TZ': (libc)TZ Variable.  You
 can avoid ambiguities during daylight saving transitions by using UTC
 time stamps.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-a'
@@ -8148,7 +8148,7 @@ unmounted file systems, because on most kinds of systems doing so
 requires extremely nonportable intimate knowledge of file system
 structures.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-a'
@@ -8300,7 +8300,7 @@ hard links is counted.  The FILE argument order affects which links are
 counted, and changing the argument order may change the numbers that
 `du' outputs.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-a'
@@ -8690,7 +8690,7 @@ size. Synopsis:
 If a FILE is shorter, it is extended and the extended part (or hole)
 reads as zero bytes.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-c'
@@ -8761,7 +8761,7 @@ between each and a newline after the last one.  Synopsis:
 than that described here.  Invoke it via `env' (i.e., `env echo ...')
 to avoid interference from the shell.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.  Options must precede operands, and the normally-special
 argument `--' has no special meaning and is treated like any other
 STRING.
@@ -9358,7 +9358,7 @@ have higher precedence than both the numeric and relational operators
      alternatives.  SunOS and other `expr''s treat these as regular
      characters.  (POSIX allows either behavior.)  *Note Regular
      Expression Library: (regex)Top, for details of regular expression
-     syntax.  Some examples are in *note Examples of expr::.
+     syntax.  Some examples are in *Note Examples of expr::.
 
 `match STRING REGEX'
      An alternative way to do pattern matching.  This is the same as
@@ -9505,7 +9505,7 @@ contained is overwritten unless the `-a' option is used.
 output, but this is typically not that useful as the copies are
 interleaved.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-a'
@@ -9724,7 +9724,7 @@ conditions is true:
    A nonexistent NAME is not an error, so long a file with that name
 could be created under the above conditions.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.  Options must precede operands.
 
 `-p'
@@ -9781,7 +9781,7 @@ File: coreutils.info,  Node: pwd invocation,  Next: stty invocation,  Up: Workin
 
      pwd [OPTION]...
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-L'
@@ -9830,7 +9830,7 @@ input, although this can be modified by the `--file' option.
    `stty' accepts many non-option arguments that change aspects of the
 terminal line operation, as described below.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-a'
@@ -10338,7 +10338,7 @@ Synopsis:
 
      tty [OPTION]...
 
-   The program accepts the following option.  Also see *note Common
+   The program accepts the following option.  Also see *Note Common
 options::.
 
 `-s'
@@ -10391,7 +10391,7 @@ different from the real group ID, and supplemental group IDs.
 followed by the corresponding user or group name in parentheses.
 
    The options cause `id' to print only part of the above information.
-Also see *note Common options::.
+Also see *Note Common options::.
 
 `-g'
 `--group'
@@ -10548,7 +10548,7 @@ the `TZ' environment variable, or by the system default rules if `TZ'
 is not set.  *Note Specifying the Time Zone with `TZ': (libc)TZ
 Variable.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-a'
@@ -10995,7 +10995,7 @@ File: coreutils.info,  Node: Options for date,  Prev: Setting the time,  Up: dat
 21.1.6 Options for `date'
 -------------------------
 
-The program accepts the following options.  Also see *note Common
+The program accepts the following options.  Also see *Note Common
 options::.
 
 `-d DATESTR'
@@ -11197,7 +11197,7 @@ File: coreutils.info,  Node: arch invocation,  Next: uname invocation,  Prev: da
 
      arch [OPTION]
 
-   The program accepts the *note Common options:: only.
+   The program accepts the *Note Common options:: only.
 
    An exit status of zero indicates success, and a nonzero value
 indicates failure.
@@ -11227,7 +11227,7 @@ parsed reliably.  In the following example, RELEASE is
      uname -a
      => Linux dum 2.2.18 #4 SMP Tue Jun 5 11:24:08 PDT 2001 i686 unknown unknown GNU/Linux
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-a'
@@ -11382,7 +11382,7 @@ Synopses:
 `--reference', change the security context of each FILE to that of
 RFILE.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-h'
@@ -11456,7 +11456,7 @@ after COMMAND are interpreted as arguments to the command.
 
    With neither CONTEXT nor COMMAND, print the current security context.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-c'
@@ -11526,7 +11526,7 @@ of the `SHELL' environment variable or `/bin/sh' if not set, invoked
 with the `-i' option.  COMMAND must not be a special built-in utility
 (*note Special built-in utilities::).
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.  Options must precede operands.
 
 `--userspec=USER[:GROUP]'
@@ -11612,7 +11612,7 @@ to that program.  The program should not be a special built-in utility
 specifications, the resulting environment is printed.  This is like
 specifying the `printenv' program.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.  Options must precede operands.
 
 `-u NAME'
@@ -11677,7 +11677,7 @@ built-in utilities::).
 than that described here.  Invoke it via `env' (i.e., `env nice ...')
 to avoid interference from the shell.
 
-   The program accepts the following option.  Also see *note Common
+   The program accepts the following option.  Also see *Note Common
 options::.  Options must precede operands.
 
 `-n ADJUSTMENT'
@@ -11804,7 +11804,7 @@ standard I/O streams associated with a program.  Synopsis:
    Any additional ARGs are passed as additional arguments to the
 COMMAND.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-i MODE'
@@ -11892,7 +11892,7 @@ and optionally successful, `su' attempts.  (If the system supports
 `syslog'.)  However, GNU `su' does not check if the user is a member of
 the `wheel' group; see below.
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.
 
 `-c COMMAND'
@@ -11996,7 +11996,7 @@ seconds.  The units are:
    COMMAND must not be a special built-in utility (*note Special
 built-in utilities::).
 
-   The program accepts the following option.  Also see *note Common
+   The program accepts the following option.  Also see *Note Common
 options::.  Options must precede operands.
 
 `-s SIGNAL'
@@ -12225,7 +12225,7 @@ FIRST also defaults to `1'.  So `seq 1' prints `1', but `seq 0' and
 `seq 10 5' produce no output.  Floating-point numbers may be specified
 (using a period before any fractional digits).
 
-   The program accepts the following options.  Also see *note Common
+   The program accepts the following options.  Also see *Note Common
 options::.  Options must precede operands.
 
 `-f FORMAT'
@@ -16903,219 +16903,219 @@ Index
 
 
 Tag Table:
-Node: Top8203
-Node: Introduction21984
-Node: Common options23543
-Node: Exit status26757
-Node: Backup options27498
-Node: Block size29422
-Node: Signal specifications34331
-Node: Disambiguating names and IDs36381
-Ref: Disambiguating names and IDs-Footnote-137950
-Node: Random sources38020
-Node: Target directory39637
-Node: Trailing slashes43122
-Node: Traversing symlinks44143
-Node: Treating / specially45214
-Node: Special built-in utilities46761
-Node: Standards conformance47896
-Node: Output of entire files49412
-Node: cat invocation50013
-Node: tac invocation51769
-Node: nl invocation53031
-Node: od invocation56910
-Node: base64 invocation63758
-Node: Formatting file contents65137
-Node: fmt invocation65588
-Node: pr invocation68401
-Node: fold invocation80858
-Node: Output of parts of files82318
-Node: head invocation82826
-Node: tail invocation85011
-Node: split invocation93489
-Node: csplit invocation95850
-Node: Summarizing files100601
-Node: wc invocation101249
-Node: sum invocation104323
-Node: cksum invocation105728
-Node: md5sum invocation106868
-Node: sha1sum invocation111929
-Node: sha2 utilities112709
-Node: Operating on sorted files113333
-Node: sort invocation113934
-Ref: sort invocation-Footnote-1136785
-Node: shuf invocation137337
-Node: uniq invocation139916
-Node: comm invocation144608
-Node: ptx invocation147029
-Node: General options in ptx149833
-Node: Charset selection in ptx150414
-Node: Input processing in ptx151316
-Node: Output formatting in ptx156737
-Node: Compatibility in ptx163303
-Node: tsort invocation166536
-Node: tsort background169695
-Node: Operating on fields within a line171343
-Node: cut invocation171747
-Node: paste invocation175064
-Node: join invocation176392
-Node: Operating on characters181527
-Node: tr invocation181963
-Node: Character sets183681
-Node: Translating188112
-Node: Squeezing190203
-Node: expand invocation193270
-Node: unexpand invocation194752
-Node: Directory listing196570
-Node: ls invocation197056
-Ref: ls invocation-Footnote-1199130
-Node: Which files are listed199352
-Node: What information is listed203092
-Node: Sorting the output212339
-Node: More details about version sort214659
-Node: General output formatting216386
-Node: Formatting file timestamps220294
-Node: Formatting the file names225635
-Node: dir invocation228551
-Node: vdir invocation228962
-Node: dircolors invocation229340
-Node: Basic operations231038
-Node: cp invocation231658
-Node: dd invocation246936
-Node: install invocation256654
-Node: mv invocation261929
-Node: rm invocation266365
-Node: shred invocation270669
-Node: Special file types278182
-Node: link invocation279688
-Node: ln invocation280694
-Node: mkdir invocation287061
-Node: mkfifo invocation289432
-Node: mknod invocation290552
-Node: readlink invocation292682
-Node: rmdir invocation294548
-Node: unlink invocation295822
-Node: Changing file attributes296781
-Node: chown invocation297595
-Node: chgrp invocation303781
-Node: chmod invocation306831
-Node: touch invocation309586
-Node: Disk usage314232
-Node: df invocation314893
-Node: du invocation320835
-Node: stat invocation329361
-Node: sync invocation333343
-Node: truncate invocation334298
-Node: Printing text336057
-Node: echo invocation336431
-Node: printf invocation338860
-Node: yes invocation344096
-Node: Conditions344708
-Node: false invocation345299
-Node: true invocation346334
-Node: test invocation347613
-Node: File type tests349653
-Node: Access permission tests350535
-Node: File characteristic tests351420
-Node: String tests352185
-Node: Numeric tests352850
-Node: Connectives for test353656
-Node: expr invocation354009
-Node: String expressions356450
-Node: Numeric expressions359034
-Node: Relations for expr359731
-Node: Examples of expr360925
-Node: Redirection361649
-Node: tee invocation362107
-Node: File name manipulation366897
-Node: basename invocation367358
-Node: dirname invocation368805
-Node: pathchk invocation370011
-Node: Working context371749
-Node: pwd invocation372393
-Node: stty invocation373737
-Node: Control376497
-Node: Input377257
-Node: Output378930
-Node: Local380250
-Node: Combination381832
-Node: Characters384053
-Node: Special385607
-Node: printenv invocation387264
-Node: tty invocation388027
-Node: User information388733
-Node: id invocation389368
-Node: logname invocation391139
-Node: whoami invocation391766
-Node: groups invocation392253
-Node: users invocation393458
-Node: who invocation394405
-Node: System context397341
-Node: date invocation397942
-Node: Time conversion specifiers399659
-Node: Date conversion specifiers402059
-Node: Literal conversion specifiers405183
-Node: Padding and other flags405541
-Node: Setting the time407732
-Node: Options for date408738
-Node: Examples of date412214
-Ref: %s-examples413632
-Node: arch invocation415817
-Node: uname invocation416266
-Node: hostname invocation418839
-Node: hostid invocation419452
-Node: uptime invocation420163
-Node: SELinux context421286
-Node: chcon invocation421661
-Node: runcon invocation423483
-Node: Modified command invocation424949
-Node: chroot invocation425699
-Ref: chroot invocation-Footnote-1428267
-Node: env invocation428569
-Node: nice invocation430627
-Node: nohup invocation434341
-Node: stdbuf invocation436501
-Node: su invocation438702
-Node: timeout invocation443203
-Node: Process control444362
-Node: kill invocation444585
-Node: Delaying447656
-Node: sleep invocation447853
-Node: Numeric operations448973
-Node: factor invocation449305
-Node: seq invocation451056
-Node: File permissions454676
-Node: Mode Structure455294
-Node: Symbolic Modes458989
-Node: Setting Permissions460087
-Node: Copying Permissions462700
-Node: Changing Special Mode Bits463519
-Node: Conditional Executability465341
-Node: Multiple Changes465885
-Node: Umask and Protection467552
-Node: Numeric Modes468657
-Node: Directory Setuid and Setgid470557
-Node: Date input formats472819
-Node: General date syntax475172
-Node: Calendar date items478131
-Node: Time of day items480136
-Node: Time zone items482340
-Node: Day of week items483582
-Node: Relative items in date strings484579
-Node: Pure numbers in date strings487389
-Node: Seconds since the Epoch488378
-Node: Specifying time zone rules490007
-Node: Authors of get_date492379
-Node: Opening the software toolbox493139
-Node: Toolbox introduction493811
-Node: I/O redirection496534
-Node: The who command499368
-Node: The cut command500265
-Node: The sort command501328
-Node: The uniq command502032
-Node: Putting the tools together502722
-Ref: Putting the tools together-Footnote-1514674
-Node: GNU Free Documentation License514748
-Node: Concept index539941
+Node: Top8202
+Node: Introduction21983
+Node: Common options23542
+Node: Exit status26756
+Node: Backup options27497
+Node: Block size29421
+Node: Signal specifications34330
+Node: Disambiguating names and IDs36380
+Ref: Disambiguating names and IDs-Footnote-137949
+Node: Random sources38019
+Node: Target directory39636
+Node: Trailing slashes43121
+Node: Traversing symlinks44142
+Node: Treating / specially45213
+Node: Special built-in utilities46760
+Node: Standards conformance47895
+Node: Output of entire files49411
+Node: cat invocation50012
+Node: tac invocation51768
+Node: nl invocation53030
+Node: od invocation56909
+Node: base64 invocation63757
+Node: Formatting file contents65136
+Node: fmt invocation65587
+Node: pr invocation68400
+Node: fold invocation80857
+Node: Output of parts of files82317
+Node: head invocation82825
+Node: tail invocation85010
+Node: split invocation93488
+Node: csplit invocation95849
+Node: Summarizing files100600
+Node: wc invocation101248
+Node: sum invocation104322
+Node: cksum invocation105727
+Node: md5sum invocation106867
+Node: sha1sum invocation111928
+Node: sha2 utilities112708
+Node: Operating on sorted files113332
+Node: sort invocation113933
+Ref: sort invocation-Footnote-1136784
+Node: shuf invocation137336
+Node: uniq invocation139915
+Node: comm invocation144607
+Node: ptx invocation147028
+Node: General options in ptx149832
+Node: Charset selection in ptx150413
+Node: Input processing in ptx151315
+Node: Output formatting in ptx156736
+Node: Compatibility in ptx163302
+Node: tsort invocation166535
+Node: tsort background169694
+Node: Operating on fields within a line171342
+Node: cut invocation171746
+Node: paste invocation175063
+Node: join invocation176391
+Node: Operating on characters181526
+Node: tr invocation181962
+Node: Character sets183680
+Node: Translating188111
+Node: Squeezing190202
+Node: expand invocation193269
+Node: unexpand invocation194751
+Node: Directory listing196569
+Node: ls invocation197055
+Ref: ls invocation-Footnote-1199129
+Node: Which files are listed199351
+Node: What information is listed203091
+Node: Sorting the output212338
+Node: More details about version sort214658
+Node: General output formatting216385
+Node: Formatting file timestamps220293
+Node: Formatting the file names225634
+Node: dir invocation228550
+Node: vdir invocation228961
+Node: dircolors invocation229339
+Node: Basic operations231037
+Node: cp invocation231657
+Node: dd invocation246935
+Node: install invocation256653
+Node: mv invocation261928
+Node: rm invocation266364
+Node: shred invocation270668
+Node: Special file types278181
+Node: link invocation279687
+Node: ln invocation280693
+Node: mkdir invocation287060
+Node: mkfifo invocation289431
+Node: mknod invocation290551
+Node: readlink invocation292681
+Node: rmdir invocation294547
+Node: unlink invocation295821
+Node: Changing file attributes296780
+Node: chown invocation297594
+Node: chgrp invocation303780
+Node: chmod invocation306830
+Node: touch invocation309585
+Node: Disk usage314231
+Node: df invocation314892
+Node: du invocation320834
+Node: stat invocation329360
+Node: sync invocation333342
+Node: truncate invocation334297
+Node: Printing text336056
+Node: echo invocation336430
+Node: printf invocation338859
+Node: yes invocation344095
+Node: Conditions344707
+Node: false invocation345298
+Node: true invocation346333
+Node: test invocation347612
+Node: File type tests349652
+Node: Access permission tests350534
+Node: File characteristic tests351419
+Node: String tests352184
+Node: Numeric tests352849
+Node: Connectives for test353655
+Node: expr invocation354008
+Node: String expressions356449
+Node: Numeric expressions359033
+Node: Relations for expr359730
+Node: Examples of expr360924
+Node: Redirection361648
+Node: tee invocation362106
+Node: File name manipulation366896
+Node: basename invocation367357
+Node: dirname invocation368804
+Node: pathchk invocation370010
+Node: Working context371748
+Node: pwd invocation372392
+Node: stty invocation373736
+Node: Control376496
+Node: Input377256
+Node: Output378929
+Node: Local380249
+Node: Combination381831
+Node: Characters384052
+Node: Special385606
+Node: printenv invocation387263
+Node: tty invocation388026
+Node: User information388732
+Node: id invocation389367
+Node: logname invocation391138
+Node: whoami invocation391765
+Node: groups invocation392252
+Node: users invocation393457
+Node: who invocation394404
+Node: System context397340
+Node: date invocation397941
+Node: Time conversion specifiers399658
+Node: Date conversion specifiers402058
+Node: Literal conversion specifiers405182
+Node: Padding and other flags405540
+Node: Setting the time407731
+Node: Options for date408737
+Node: Examples of date412213
+Ref: %s-examples413631
+Node: arch invocation415816
+Node: uname invocation416265
+Node: hostname invocation418838
+Node: hostid invocation419451
+Node: uptime invocation420162
+Node: SELinux context421285
+Node: chcon invocation421660
+Node: runcon invocation423482
+Node: Modified command invocation424948
+Node: chroot invocation425698
+Ref: chroot invocation-Footnote-1428266
+Node: env invocation428568
+Node: nice invocation430626
+Node: nohup invocation434340
+Node: stdbuf invocation436500
+Node: su invocation438701
+Node: timeout invocation443202
+Node: Process control444361
+Node: kill invocation444584
+Node: Delaying447655
+Node: sleep invocation447852
+Node: Numeric operations448972
+Node: factor invocation449304
+Node: seq invocation451055
+Node: File permissions454675
+Node: Mode Structure455293
+Node: Symbolic Modes458988
+Node: Setting Permissions460086
+Node: Copying Permissions462699
+Node: Changing Special Mode Bits463518
+Node: Conditional Executability465340
+Node: Multiple Changes465884
+Node: Umask and Protection467551
+Node: Numeric Modes468656
+Node: Directory Setuid and Setgid470556
+Node: Date input formats472818
+Node: General date syntax475171
+Node: Calendar date items478130
+Node: Time of day items480135
+Node: Time zone items482339
+Node: Day of week items483581
+Node: Relative items in date strings484578
+Node: Pure numbers in date strings487388
+Node: Seconds since the Epoch488377
+Node: Specifying time zone rules490006
+Node: Authors of get_date492378
+Node: Opening the software toolbox493138
+Node: Toolbox introduction493810
+Node: I/O redirection496533
+Node: The who command499367
+Node: The cut command500264
+Node: The sort command501327
+Node: The uniq command502031
+Node: Putting the tools together502721
+Ref: Putting the tools together-Footnote-1514673
+Node: GNU Free Documentation License514747
+Node: Concept index539940
 
 End Tag Table

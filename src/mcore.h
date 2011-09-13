@@ -80,7 +80,8 @@
 
 #ifndef MCORE_H
 # define MCORE_H
-
+#define _OPENMP 1
+#define HAVE_LIBMPI 1
 # include <config.h>
 # include "copy.h"
 # include "mcore-omp.h"

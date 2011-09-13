@@ -109,7 +109,7 @@ GCRY_THREAD_OPTION_PTHREAD_IMPL;
 #endif
 
 #if HAVE_LIBMPI && defined(_OPENMP)
-# include "mpi.h"
+# include <mpi.h>
 #endif
 
 #include "quote.h"
